@@ -5,8 +5,8 @@
 * (including web sites) or distributed to other students.
 *
 * Name: Ali Asadullah Student ID: 174606210 Date: jan 23, 2023
-* Cyclic Link: _______________________________________________________________
-*
+* Cyclic Link: https://tame-newt-flannel-shirt.cyclic.app
+
 ********************************************************************************/ 
 
 
@@ -56,7 +56,7 @@ app.get("/api/movies/:id", (req,res) => {
         });
 });
 
-app.put("/api/sales/:id", (req,res) => {
+app.put("/api/movies/:id", (req,res) => {
     db.updateMovieById(req.body, req.params.id)
         .then(() => {
             res.status(200).json(`movie ${req.body._id} successfully updated`);
@@ -66,7 +66,7 @@ app.put("/api/sales/:id", (req,res) => {
         });
 });
 
-app.delete("/api/sales/:id", (req,res) => {
+app.delete("/api/movies/:id", (req,res) => {
    db.deleteMovieById(req.params.id)
         .then(() => {
             res.status(200).json(`movie ${req.params.id} successfully deleted`);
